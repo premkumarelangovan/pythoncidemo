@@ -3,4 +3,5 @@ myvenv/
 .idea/
 source/__pycache__/
 test/__pycache__/
-
+build/
+dist/
