@@ -40,3 +40,5 @@ jobs:
         pytest
         pyinstaller --onefile source/main.py
         ls dist/ -a
+        sftp u78209567@home540211959.1and1-data.host
+        password
