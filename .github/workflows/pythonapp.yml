@@ -38,4 +38,5 @@ jobs:
       run: |
         export PYTHONPATH=source
         pytest
-        pyinstaller --onefile main.py
+        pyinstaller --onefile source/main.py
+        ls dist/ -a
