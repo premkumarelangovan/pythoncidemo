@@ -35,10 +35,12 @@ jobs:
         # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
+      env:
+        FTP_PASSWORD: ${{secrets.FTP_PASSWORD}}
       run: |
         export PYTHONPATH=source
         pytest
         pyinstaller --onefile source/main.py
         ls dist/ -a
         sftp u78209567@home540211959.1and1-data.host
-        password
+        $FTP_PASSWORD
